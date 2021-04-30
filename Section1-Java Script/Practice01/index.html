@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form">
+        <form action="result.html" onSubmit="return checkform()">
+            
+            <lable>First Name</lable>
+            <input type="text" id="name" placeholder="Your name.." >
+            
+            <lable>Last Name</lable>
+            <input type="text" id="fName" placeholder="Your last name.." >
+            
+            <labe>Country</lable>
+            <select name="country" id="country">
+                <option value="Australia">Australia</option>
+                <option value="Iran">Iran</option>
+                <option value="Canada">Canada</option>
+                <option value="Netherland">Netherland</option>
+            </select>
+            
+            <label >Email</label>
+            <input type="email" name="email" id="email"  placeholder="Your Email.." onkeyup="validationEmail()" >
+            <div id="errorEmail"></div>
+            
+            <label >Phone Number</label>
+            <input type="text" name="number" id="phone" placeholder="Your Phone Number.." onkeyup=" validationPhone()" >
+            <div id="errorPhone"></div>
+            
+            <lable>Subject</lable>
+            <textarea type="text" placeholder="Write somthing.." name="subject" ></textarea>
+            <input type="submit" name="submit" id="submit" >
+        </form>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <title>Sort a HTML List Alphabetically</title>
+  <body>
+    <p>Click the button to sort the list alphabetically:</p>
+    <button onclick="sortList()">Sort</button>
+    <ul id="id01">
+      <li>Oslo</li>
+      <li>Stockholm</li>
+      <li>Berlin</li>
+      <li>Rome</li>
+    </ul>
+    <script>
+      function sortList() {
+        var list, i, switching, b, shouldSwitch;
+        list = document.getElementById("id01");
+        switching = true;
+        while (switching) {
+          switching = false;
+          b = list.getElementsByTagName("LI");
+          for (i = 0; i < b.length - 1; i++) {
+            shouldSwitch = false;
+            if (
+              b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()
+            ) {
+              shouldSwitch = true;
+              break;
+            }
+          }
+          if (shouldSwitch) {
+            b[i].parentNode.insertBefore(b[i + 1], b[i]);
+            switching = true;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
