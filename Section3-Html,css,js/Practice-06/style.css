@@ -88,3 +88,10 @@ ul.myUl li:before {
 .myDiv20 {
   color: white;
 }
+.mySpan {
+  top: 15%;
+  left: 0;
+}
+.myNewSvg {
+  width: 25px;
+}
